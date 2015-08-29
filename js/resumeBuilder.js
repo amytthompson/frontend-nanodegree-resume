@@ -11,10 +11,12 @@ console.log(awesomeThoughts);
 var funThoughts =
 	awesomeThoughts.replace("AWESOME","FUN");
 
+var name = "Amy Thompson";
+var formattedName = HTMLheaderName.replace("%data%", name);
+
+var role = "Web Developer";
+var formattedRole = HTMLheaderRole.replace("%data%", role)
+
 $("#main").append(funThoughts);
-
-var formattedName = HTMLheaderName.replace("%data%", "Amy Thompson");
-$("#header").append(formattedName);
-
-var formattedRole = HTMLheaderRole.replace("%data%", "Systems Administrator")
-$("#header").append(formattedRole);
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
