@@ -173,12 +173,13 @@ displaySchools();
 
 function displayOnline () {
 	for (course in education.onlineCourses) {
+		
 		var onlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].name);
 		$(".education-entry:last").append(onlineSchool);
 		var onlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
 		$(".education-entry:last").append(onlineDates);
-		var onlineClasses = HTMLonlineClasses.replace("%data%", education.onlineCourses[course].classes);
-		$(".education-entry:last").append(onlineClasses);
+		var onlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].classes);
+		$(".education-entry:last").append(onlineTitle);
 		var onlineclassURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
 		$(".education-entry:last").append(onlineclassURL);
 	}
