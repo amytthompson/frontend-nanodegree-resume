@@ -11,32 +11,36 @@ var bio = {
 	},
 	"welcomeMessage" : "#learningNerd",
 	"bioPic" : "images/mypicture.jpg",
-	"skills" : ["HTML/CSS", "Git", "Grunt","JavaScript"]
+	"skills" : ["HTML/CSS", "JavaScript", "Git/Github"]
+}
+
+//appends contact information to resume
+	bio.display = function () {
+	var formattedName = HTMLheaderName.replace("%data%", bio.name);
+	$("#header").append(formattedName);
+	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+	$("#header").append(formattedRole);
+	var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+	$("#header").append(formattedWelcome);
+	var formattedPic = HTMLbioPic.replace("%data%", bio.bioPic);
+	$("#header").append(formattedPic);
+	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+	$("#topContacts").append(formattedEmail);
+	$("#footerContacts").append(formattedEmail);
+	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+	$("#topContacts").append(formattedGithub);
+	$("#footerContacts").append(formattedGithub);
+	var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+	$("#topContacts").append(formattedTwitter);
+	$("#footerContacts").append(formattedTwitter);
+	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+	$("#topContacts").append(formattedLocation);
 };
 
+bio.display();
 
-//appends contact information to resume 
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-$("#header").append(formattedName);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-$("#header").append(formattedRole);
-var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-$("#header").append(formattedWelcome);
-var formattedPic = HTMLbioPic.replace("%data%", bio.bioPic);
-$("#header").append(formattedPic);
-var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-$("#topContacts").append(formattedEmail);
-$("#footerContacts").append(formattedEmail);
-var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-$("#topContacts").append(formattedGithub);
-$("#footerContacts").append(formattedGithub);
-var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-$("#topContacts").append(formattedTwitter);
-$("#footerContacts").append(formattedTwitter);
-var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-$("#topContacts").append(formattedLocation);
-
-if (bio.skills.length > 0) {
+//appends skills to resume
+	if (bio.skills.length > 0) {
 	$("#header").append(HTMLskillsStart);
 	var formattedSkill1 = HTMLskills.replace("%data%", bio.skills[0]);
 	$("#header").append(formattedSkill1);
@@ -45,6 +49,7 @@ if (bio.skills.length > 0) {
 	var formattedSkill3 = HTMLskills.replace("%data%", bio.skills[2]);
 	$("#header").append(formattedSkill3);
 };
+
 
 var work = {
 	"jobs": [
@@ -84,7 +89,7 @@ var work = {
 		"description" : "white feathers"
 	},
 	]
-};
+}
 
 //appends work history to resume
 function displayWork () {
@@ -100,10 +105,11 @@ function displayWork () {
 	$(".work-entry:last").append(formattedDates);
 	$(".work-entry:last").append(formattedDescription);
 	$(".work-entry:last").append(formattedLocation);
-}
+	}	
 };
 
 displayWork ();
+
 
 var education = {
 	"schools": [
@@ -112,41 +118,41 @@ var education = {
 		"location": "Denton, TX",
 		"degree": "BS",
 		"majors": ["Government"],
-		"dates": "1995",
+		"dates": 1995,
 	},
 	],
 
 	"onlineCourses": [
 	{
 		"name": "Austin Community College Continuing Education",
-		"dates": "2014",
+		"dates": 2014,
 		"classes": "Introduction to WWW Authoring, HTML, and CSS"
 		//"url": "http://www.continue.austincc.edu"
 	},
 	{
 		"name": "Udacity",
-		"dates": "2015",
+		"dates": 2015,
 		"classes": "Front-End NanoDegree",
 		//"url": "www.udacity.com"
 
 	},
 	{
 		"name": "CodeSchool",
-		"dates": "2014",
+		"dates": 2015,
 		"classes": ["HTML/CSS: Front-End Foundations"]
 		//"url": "www.codeschool.com"
 	},
 	{
 		"name": "CodeCademy",
-		"dates": "2014",
+		"dates": 2015,
 		"classes": ["HTML & CSS"] 
 		//"url": "www.codecademy.com"
 	},
 	]
-};
+}
 
 //appends education to resume
-function displayEducation () {
+function displaySchools () {
 	for (school in education.schools) {
 		$("#education").append(HTMLschoolStart);
 
@@ -161,9 +167,12 @@ function displayEducation () {
 		var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
 		$(".education-entry:last").append(formattedschoolMajor);
 	}
+};
 
+displaySchools();
+
+function displayOnline () {
 	for (course in education.onlineCourses) {
-
 		var onlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].name);
 		$(".education-entry:last").append(onlineSchool);
 		var onlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
@@ -175,34 +184,33 @@ function displayEducation () {
 	}
 };
 
-displayEducation ();
+displayOnline ();
 
 
 var projects = {
 	"projects": [
 	{
-		"title" : "Project1",
-		"dates" : "January February",
-		"description" : "Project Portfolio",
-		"images" : "http://lorempixel.com/output/abstract-q-c-640-480-3.jpg"
+		"title": "Project1",
+		"dates": "January February",
+		"description": "Project Portfolio",
+		"images": "http://lorempixel.com/output/abstract-q-c-640-480-3.jpg"
 	},
 	{
 
-		"title" : "Project2",
-		"dates" : "March April",
-		"description" : "Online Resume",
-		"images" : "http://lorempixel.com/output/abstract-q-c-640-480-1.jpg"
+		"title": "Project2",
+		"dates": "March April",
+		"description": "Online Resume",
+		"images": "http://lorempixel.com/output/abstract-q-c-640-480-1.jpg"
 	},
 	{
 
-		"title" : "Project3",
-		"dates" : "May June",
-		"description" : "Arcade Game",
-		"images" : "http://lorempixel.com/output/abstract-q-c-640-480-9.jpg"
+		"title": "Project3",
+		"dates": "May June",
+		"description": "Arcade Game",
+		"images": "http://lorempixel.com/output/abstract-q-c-640-480-9.jpg"
 	},
 	]
-};
-
+}
 //appends project history to resume
 projects.display = function () {
 	for (project in projects.projects) {
@@ -220,22 +228,15 @@ projects.display = function () {
 		var projectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
 		$(".project-entry:last").append(projectImage);
 	}
-};
+}
 
 projects.display();
 
 
+//appends map to resume
+$("#mapDiv").append(googleMap);
 
-//collects clicks on resume
-$(document).click(function(loc) {
-	var x = loc.pageX;
-	var y = loc.pageY;
-
-	logClicks(x,y);
-
-});
-
-//
+//appends cities worked to googleMap
 function locationizer(work_obj) {
 	var locationArray = [];
 	for (job in work_obj.jobs) {
@@ -246,6 +247,10 @@ function locationizer(work_obj) {
 	return locationArray;
 };
 
+
+//appends internationalize button to resume
+$("#main").append(internationalizeButton);
+
 //internationalizes name
 function inName(name) {
 	name = name.trim().split(" ");
@@ -254,14 +259,4 @@ function inName(name) {
 	
 	return name[0] + name[1];
 };
-
-
-//appends internationalize button to resume
-$("#main").append(internationalizeButton);
-
-
-//appends map to resume
-$("#mapDiv").append(googleMap);
-
-
 
