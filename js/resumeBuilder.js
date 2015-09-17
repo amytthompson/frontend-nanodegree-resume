@@ -145,11 +145,10 @@ var education = {
 };
 
 //appends education to resume
-education.display = function () {
-	for (var school in education.schools) {
+education.schools.display = function() {
 
+		for (var school in education.schools) {
 		$("#education").append(HTMLschoolStart);
-
 		var formattedschoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
 		var formattedschoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
 		var formattedschoolnameDegree = formattedschoolName + formattedschoolDegree;
@@ -159,6 +158,9 @@ education.display = function () {
 		var formattedschoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
 		var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
 		$(".education-entry:last").append(formattedschoolDates + formattedschoolLocation + formattedschoolMajor);
+}
+};
+education.onlineCourses.display = function() { 
 
 		for (var course in education.onlineCourses) {
 		var onlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].name);
@@ -170,9 +172,9 @@ education.display = function () {
 		var onlineclassURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
 		$(".education-entry:last").append(onlineDates + onlineclassURL);
 	}
-}
 };
-education.display ();
+education.schools.display ();
+education.onlineCourses.display();
 
 
 var projects = {
