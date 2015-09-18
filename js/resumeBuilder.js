@@ -103,24 +103,24 @@ var education = {
         'dates': 1995,
     }, ],
     'onlineCourses': [{
-        'name': 'Udacity',
-        'dates': 2015,
-        'classes': 'Front-End NanoDegree',
+        'school': 'Udacity',
+        'date': 2015,
+        'title': 'Front-End NanoDegree',
         'url': 'www.udacity.com'
     }, {
-        'name': 'Austin Community College Continuing Education',
-        'dates': 2014,
-        'classes': 'Introduction to WWW Authoring, HTML, and CSS',
+        'school': 'Austin Community College Continuing Education',
+        'date': 2014,
+        'title': 'Introduction to WWW Authoring, HTML, and CSS',
         'url': 'http://www.continue.austincc.edu'
     }, {
-        'name': 'CodeSchool',
-        'dates': 2015,
-        'classes': ['HTML/CSS: Front-End Foundations'],
+        'school': 'CodeSchool',
+        'date': 2015,
+        'title': ['HTML/CSS: Front-End Foundations'],
         'url': 'www.codeschool.com'
     }, {
-        'name': 'CodeCademy',
-        'dates': 2015,
-        'classes': ['HTML & CSS'],
+        'school': 'CodeCademy',
+        'date': 2015,
+        'title': ['HTML & CSS'],
         'url': 'www.codecademy.com'
     }, ]
 };
@@ -143,12 +143,12 @@ education.display = function() {
     }
 
     for (var course in education.onlineCourses) {
-        var onlineSchool = HTMLonlineSchool.replace(data, education.onlineCourses[course].name);
-        var onlineTitle = HTMLonlineTitle.replace(data, education.onlineCourses[course].classes);
+        var onlineSchool = HTMLonlineSchool.replace(data, education.onlineCourses[course].school);
+        var onlineTitle = HTMLonlineTitle.replace(data, education.onlineCourses[course].title);
         var onlinetitleSchool = onlineTitle + onlineSchool;
         $('.education-entry:last').append(onlinetitleSchool);
 
-        var onlineDates = HTMLonlineDates.replace(data, education.onlineCourses[course].dates);
+        var onlineDates = HTMLonlineDates.replace(data, education.onlineCourses[course].date);
         var onlineclassURL = HTMLonlineURL.replace(data, education.onlineCourses[course].url);
         $('.education-entry:last').append(onlineDates + onlineclassURL);
     }
