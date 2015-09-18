@@ -3,15 +3,15 @@
 var bio = {
 	'name': 'Amy Thompson',
 	'role': 'Udacity Student',
-	'contacts' : {
-		'email' : 'amytgarcia@gmail.com',
-		'github' : 'amytthompson.github.io',
-		'twitter' : '@amytgarcia',
-		'location' : 'Austin'
+	'contacts': {
+		'email': 'amytgarcia@gmail.com',
+		'github': 'amytthompson.github.io',
+		'twitter': '@amytgarcia',
+		'location': 'Austin'
 	},
-	'welcomeMessage' : '#learningNerd',
-	'bioPic' : 'images/mypicture.jpg',
-	'skills' : ['HTML/CSS', 'JavaScript', 'Git/Github']
+	'welcomeMessage': '#learningNerd',
+	'bioPic': 'images/mypicture.jpg',
+	'skills': ['HTML/CSS', 'JavaScript', 'Git/Github']
 };
 //appends contact information to resume
 	bio.display = function () {
@@ -44,43 +44,42 @@ var bio = {
 };
 bio.display();
 
-
 var work = {
 	'jobs': [
 	{
-		'employer' : 'McKool Smith',
-		'title' : 'Systems Administrator',
-		'dates' : 'March 2010 - Current',
-		'location' : 'Austin, TX',
-		'description' : 'yellow feathers'
+		'employer': 'McKool Smith',
+		'title': 'Systems Administrator',
+		'dates': 'March 2010 - Current',
+		'location': 'Austin, TX',
+		'description': 'yellow feathers'
 	},
 	{
-		'employer' : 'Thompson & Knight LLP',
-		'title' : 'IT Coordinator',
-		'dates' : 'November 2004 - February 2010',
-		'location' : 'Austin, TX',
-		'description' : 'red feathers'
+		'employer': 'Thompson & Knight LLP',
+		'title': 'IT Coordinator',
+		'dates': 'November 2004 - February 2010',
+		'location': 'Austin, TX',
+		'description': 'red feathers'
 	},
 	{
-		'employer' : 'McKool Smith',
-		'title' : 'Helpdesk',
-		'dates' : 'November 2003 - November 2004',
-		'location' : 'Dallas, TX',
-		'description' : 'purple feathers'
+		'employer': 'McKool Smith',
+		'title': 'Helpdesk',
+		'dates': 'November 2003 - November 2004',
+		'location': 'Dallas, TX',
+		'description': 'purple feathers'
 	},
 	{
-		'employer' : 'Thompson & Knight LLP',
-		'title' : 'Helpdesk',
-		'dates' : 'August 2001 - November 2003',
-		'location' : 'Dallas, TX',
-		'description' : 'orange feathers'
+		'employer': 'Thompson & Knight LLP',
+		'title': 'Helpdesk',
+		'dates': 'August 2001 - November 2003',
+		'location': 'Dallas, TX',
+		'description': 'orange feathers'
 	},
 	{
-		'employer' : 'USWeb/marchFIRST',
-		'title' : 'Helpdesk',
-		'dates' : '1998 - 2001',
-		'location' : 'Dallas, TX',
-		'description' : 'white feathers'
+		'employer': 'USWeb/marchFIRST',
+		'title': 'Helpdesk',
+		'dates': '1998 - 2001',
+		'location': 'Dallas, TX',
+		'description': 'white feathers'
 	},
 	]
 };
@@ -111,14 +110,12 @@ var education = {
 		'dates': 1995,
 	},
 	],
-
 	'onlineCourses': [
 	{
 		'name': 'Udacity',
 		'dates': 2015,
 		'classes': 'Front-End NanoDegree',
 		'url': 'www.udacity.com'
-
 	},
 	{
 		'name': 'Austin Community College Continuing Education',
@@ -140,7 +137,6 @@ var education = {
 	},
 	]
 };
-
 //appends education to resume
 education.display = function() {
 
@@ -169,8 +165,6 @@ education.display = function() {
 	}
 };
 education.display ();
-
-
 
 var projects = {
 	'projects': [
@@ -214,7 +208,6 @@ projects.display = function () {
 		$('.project-entry:last').append(projectImage);
 	}
 };
-
 projects.display();
 
 
@@ -227,8 +220,7 @@ function locationizer(work_obj) {
 	for (var job in work_obj.jobs) {
 		var newLocation = work_obj.jobs[job].location;
 		locationArray.push(newLocation);
-	}
-
+		}
 	return locationArray;
 }
 
