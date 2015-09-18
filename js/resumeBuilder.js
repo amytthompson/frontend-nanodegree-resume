@@ -1,17 +1,17 @@
 'use strict';
 
 var bio = {
-	"name": "Amy Thompson",
-	"role": "Udacity Student",
-	"contacts" : {
-		"email" : "amytgarcia@gmail.com",
-		"github" : "amytthompson.github.io",
-		"twitter" : "@amytgarcia",
-		"location" : "Austin"
+	'name': 'Amy Thompson',
+	'role': 'Udacity Student',
+	'contacts' : {
+		'email' : 'amytgarcia@gmail.com',
+		'github' : 'amytthompson.github.io',
+		'twitter' : '@amytgarcia',
+		'location' : 'Austin'
 	},
-	"welcomeMessage" : "#learningNerd",
-	"bioPic" : "images/mypicture.jpg",
-	"skills" : ["HTML/CSS", "JavaScript", "Git/Github"]
+	'welcomeMessage' : '#learningNerd',
+	'bioPic' : 'images/mypicture.jpg',
+	'skills' : ['HTML/CSS', 'JavaScript', 'Git/Github']
 };
 //appends contact information to resume
 	bio.display = function () {
@@ -46,41 +46,41 @@ bio.display();
 
 
 var work = {
-	"jobs": [
+	'jobs': [
 	{
-		"employer" : "McKool Smith",
-		"title" : "Systems Administrator",
-		"dates" : "March 2010 - Current",
-		"location" : "Austin, TX",
-		"description" : "yellow feathers"
+		'employer' : 'McKool Smith',
+		'title' : 'Systems Administrator',
+		'dates' : 'March 2010 - Current',
+		'location' : 'Austin, TX',
+		'description' : 'yellow feathers'
 	},
 	{
-		"employer" : "Thompson & Knight LLP",
-		"title" : "IT Coordinator",
-		"dates" : "November 2004 - February 2010",
-		"location" : "Austin, TX",
-		"description" : "red feathers"
+		'employer' : 'Thompson & Knight LLP',
+		'title' : 'IT Coordinator',
+		'dates' : 'November 2004 - February 2010',
+		'location' : 'Austin, TX',
+		'description' : 'red feathers'
 	},
 	{
-		"employer" : "McKool Smith",
-		"title" : "Helpdesk",
-		"dates" : "November 2003 - November 2004",
-		"location" : "Dallas, TX",
-		"description" : "purple feathers"
+		'employer' : 'McKool Smith',
+		'title' : 'Helpdesk',
+		'dates' : 'November 2003 - November 2004',
+		'location' : 'Dallas, TX',
+		'description' : 'purple feathers'
 	},
 	{
-		"employer" : "Thompson & Knight LLP",
-		"title" : "Helpdesk",
-		"dates" : "August 2001 - November 2003",
-		"location" : "Dallas, TX",
-		"description" : "orange feathers"
+		'employer' : 'Thompson & Knight LLP',
+		'title' : 'Helpdesk',
+		'dates' : 'August 2001 - November 2003',
+		'location' : 'Dallas, TX',
+		'description' : 'orange feathers'
 	},
 	{
-		"employer" : "USWeb/marchFIRST",
-		"title" : "Helpdesk",
-		"dates" : "1998 - March 2001",
-		"location" : "Dallas, TX",
-		"description" : "white feathers"
+		'employer' : 'USWeb/marchFIRST',
+		'title' : 'Helpdesk',
+		'dates' : '1998 - 2001',
+		'location' : 'Dallas, TX',
+		'description' : 'white feathers'
 	},
 	]
 };
@@ -88,135 +88,130 @@ var work = {
 	work.display = function () {
 	for (var job in work.jobs) {
 
-		$("#workExperience").append(HTMLworkStart);
-
-		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-		var	formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+		$('#workExperience').append(HTMLworkStart);
+		var formattedEmployer = HTMLworkEmployer.replace('%data%', work.jobs[job].employer);
+		var	formattedTitle = HTMLworkTitle.replace('%data%', work.jobs[job].title);
 		var formattedEmployerTitle = formattedEmployer + formattedTitle;
-		$(".work-entry:last").append(formattedEmployerTitle);
-
-		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-		var	formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-		var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-		$(".work-entry:last").append(formattedDates + formattedDescription + formattedLocation);
-
+		$('.work-entry:last').append(formattedEmployerTitle);
+		var formattedDates = HTMLworkDates.replace('%data%', work.jobs[job].dates);
+		var	formattedDescription = HTMLworkDescription.replace('%data%', work.jobs[job].description);
+		var formattedLocation = HTMLworkLocation.replace('%data%', work.jobs[job].location);
+		$('.work-entry:last').append(formattedDates + formattedDescription + formattedLocation);
 		}	
 };
 work.display ();
 
 var education = {
-	"schools": [
+	'schools': [
 	{
-		"name": "Texas Woman\'s University",
-		"location": "Denton, TX",
-		"degree": "BS",
-		"majors": ["Government"],
-		"dates": 1995,
+		'name': 'Texas Woman\'s University',
+		'location': 'Denton, TX',
+		'degree': 'BS',
+		'majors': ['Government'],
+		'dates': 1995,
 	},
 	],
 
-	"onlineCourses": [
+	'onlineCourses': [
 	{
-		"name": "Udacity",
-		"dates": 2015,
-		"classes": "Front-End NanoDegree",
-		"url": "www.udacity.com"
+		'name': 'Udacity',
+		'dates': 2015,
+		'classes': 'Front-End NanoDegree',
+		'url': 'www.udacity.com'
 
 	},
 	{
-		"name": "Austin Community College Continuing Education",
-		"dates": 2014,
-		"classes": "Introduction to WWW Authoring, HTML, and CSS",
-		"url": "http://www.continue.austincc.edu"
+		'name': 'Austin Community College Continuing Education',
+		'dates': 2014,
+		'classes': 'Introduction to WWW Authoring, HTML, and CSS',
+		'url': 'http://www.continue.austincc.edu'
 	},
 	{
-		"name": "CodeSchool",
-		"dates": 2015,
-		"classes": ["HTML/CSS: Front-End Foundations"],
-		"url": "www.codeschool.com"
+		'name': 'CodeSchool',
+		'dates': 2015,
+		'classes': ['HTML/CSS: Front-End Foundations'],
+		'url': 'www.codeschool.com'
 	},
 	{
-		"name": "CodeCademy",
-		"dates": 2015,
-		"classes": ["HTML & CSS"], 
-		"url": "www.codecademy.com"
+		'name': 'CodeCademy',
+		'dates': 2015,
+		'classes': ['HTML & CSS'], 
+		'url': 'www.codecademy.com'
 	},
 	]
 };
 
 //appends education to resume
-education.schools.display = function() {
+education.display = function() {
 
 		for (var school in education.schools) {
-		$("#education").append(HTMLschoolStart);
-		var formattedschoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
-		var formattedschoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+		$('#education').append(HTMLschoolStart);
+		var formattedschoolName = HTMLschoolName.replace('%data%', education.schools[school].name);
+		var formattedschoolDegree = HTMLschoolDegree.replace('%data%', education.schools[school].degree);
 		var formattedschoolnameDegree = formattedschoolName + formattedschoolDegree;
-		$(".education-entry:last").append(formattedschoolnameDegree);
+		$('.education-entry:last').append(formattedschoolnameDegree);
 
-		var formattedschoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
-		var formattedschoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-		var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
-		$(".education-entry:last").append(formattedschoolDates + formattedschoolLocation + formattedschoolMajor);
-}
-};
-education.onlineCourses.display = function() { 
+		var formattedschoolDates = HTMLschoolDates.replace('%data%', education.schools[school].dates);
+		var formattedschoolLocation = HTMLschoolLocation.replace('%data%', education.schools[school].location);
+		var formattedschoolMajor = HTMLschoolMajor.replace('%data%', education.schools[school].majors);
+		$('.education-entry:last').append(formattedschoolDates + formattedschoolLocation + formattedschoolMajor);
+		}
 
 		for (var course in education.onlineCourses) {
-		var onlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].name);
-		var onlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].classes);
+		var onlineSchool = HTMLonlineSchool.replace('%data%', education.onlineCourses[course].name);
+		var onlineTitle = HTMLonlineTitle.replace('%data%', education.onlineCourses[course].classes);
 		var onlinetitleSchool = onlineTitle+ onlineSchool;
-		$(".education-entry:last").append(onlinetitleSchool);
+		$('.education-entry:last').append(onlinetitleSchool);
 
-		var onlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
-		var onlineclassURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
-		$(".education-entry:last").append(onlineDates + onlineclassURL);
+		var onlineDates = HTMLonlineDates.replace('%data%', education.onlineCourses[course].dates);
+		var onlineclassURL = HTMLonlineURL.replace('%data%', education.onlineCourses[course].url);
+		$('.education-entry:last').append(onlineDates + onlineclassURL);
 	}
 };
-education.schools.display ();
-education.onlineCourses.display();
+education.display ();
+
 
 
 var projects = {
-	"projects": [
+	'projects': [
 	{
-		"title": "Project1",
-		"dates": "January February",
-		"description": "Project Portfolio",
-		"images": "http://lorempixel.com/output/abstract-q-c-640-480-3.jpg"
+		'title': 'Project1',
+		'dates': 'January February',
+		'description': 'Project Portfolio',
+		'images': 'http://lorempixel.com/output/abstract-q-c-640-480-3.jpg'
 	},
 	{
 
-		"title": "Project2",
-		"dates": "March April",
-		"description": "Online Resume",
-		"images": "http://lorempixel.com/output/abstract-q-c-640-480-1.jpg"
+		'title': 'Project2',
+		'dates': 'March April',
+		'description': 'Online Resume',
+		'images': 'http://lorempixel.com/output/abstract-q-c-640-480-1.jpg'
 	},
 	{
 
-		"title": "Project3",
-		"dates": "May June",
-		"description": "Arcade Game",
-		"images": "http://lorempixel.com/output/abstract-q-c-640-480-9.jpg"
+		'title': 'Project3',
+		'dates': 'May June',
+		'description': 'Arcade Game',
+		'images': 'http://lorempixel.com/output/abstract-q-c-640-480-9.jpg'
 	},
 	]
 };
 //appends project history to resume
 projects.display = function () {
 	for (var project in projects.projects) {
-		$("#projects").append(HTMLprojectStart);
+		$('#projects').append(HTMLprojectStart);
 
-		var	projectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-		$(".project-entry:last").append(projectTitle);
+		var	projectTitle = HTMLprojectTitle.replace('%data%', projects.projects[project].title);
+		$('.project-entry:last').append(projectTitle);
 
-		var projectDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-		$(".project-entry:last").append(projectDates);
+		var projectDates = HTMLprojectDates.replace('%data%', projects.projects[project].dates);
+		$('.project-entry:last').append(projectDates);
 
-		var	projectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-		$(".project-entry:last").append(projectDescription);
+		var	projectDescription = HTMLprojectDescription.replace('%data%', projects.projects[project].description);
+		$('.project-entry:last').append(projectDescription);
 
-		var projectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
-		$(".project-entry:last").append(projectImage);
+		var projectImage = HTMLprojectImage.replace('%data%', projects.projects[project].images);
+		$('.project-entry:last').append(projectImage);
 	}
 };
 
@@ -224,7 +219,7 @@ projects.display();
 
 
 //appends map to resume
-$("#mapDiv").append(googleMap);
+$('#mapDiv').append(googleMap);
 
 //appends cities worked to googleMap
 function locationizer(work_obj) {
@@ -238,11 +233,11 @@ function locationizer(work_obj) {
 }
 
 //appends internationalize button to resume
-$("#main").append(internationalizeButton);
+$('#main').append(internationalizeButton);
 
 //internationalizes name
 function inName(name) {
-	name = name.trim().split(" ");
+	name = name.trim().split(' ');
 	name[1] = name[1].toUpperCase();
 	name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
 	
