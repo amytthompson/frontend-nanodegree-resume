@@ -1,7 +1,7 @@
 * {
   padding:0;
-  margin:0;
-  font-family: 'Roboto', sans-serif;
+  margin:0 auto;
+  font-family: 'Lato', sans-serif;
 }
 
 .clearfix {
@@ -18,14 +18,16 @@ h1 {
   color: #F5A623;
   line-height: 48px;
   display: inline;
+  text-align: right;
 }
 
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999999;
+  color: #000;
   line-height: 29px;
   padding: 10px;
+  text-align: center;
 }
 
 h3 {
@@ -92,7 +94,7 @@ a {
 }
 
 .orange {
-  background-color: #F5AE23;
+  background-color: #F3F3F3;
 }
 
 .orange-text {
@@ -111,12 +113,13 @@ a {
 }
 
 .dark-gray {
-  background-color: #4A4A4A;
+  background-color: #1199C3;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+    background-image: url("http://lorempixel.com/output/abstract-q-c-640-480-3.jpg");
+    background-size: cover;
 }
 
 .flex-box {
@@ -173,18 +176,17 @@ span {
 
 @media only screen and (max-width: 750px) {
 
+  .main {
+    display: block;
+    margin: 0 auto;
+  }
+
   .biopic {
     width: 175px;
   }
   #letsConnect {
     margin-top: 10%;
     text-align: center;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
-    display: none;
   }
 }
 
