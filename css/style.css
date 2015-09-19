@@ -1,23 +1,34 @@
 * {
   padding:0;
-  margin:0 auto;
   font-family: 'Lato', sans-serif;
+}
+
+#header, #navbar, #workExperience, #projects, #education, #mapDiv, #lets-connect {
+  max-width: 950px;
+  margin: 0 auto;
 }
 
 .clearfix {
   overflow: auto;
 }
 
-.education-entry, .work-entry, .project-entry {
+.education-entry, .work-entry {
   padding-left: 5%;
   padding-right: 5%;
+}
+
+.project-entry {
+  display: -webkit-flex;
+  display: table-cell;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 h1 {
   font-size: 40px;
   color: #F5A623;
   line-height: 48px;
-  display: inline;
   text-align: right;
 }
 
@@ -35,6 +46,7 @@ h3 {
   font-size: 20px;
   color: #000000;
   line-height: 22px;
+  text-align: center;
 }
 
 h4 {
@@ -50,13 +62,16 @@ h2, h3, h4, h5 {
   padding-right: 5%;
 }
 
+#mapDiv {
+  background-color: #F3F3F3;
+}
 
 .date-text {
   font-style: italic;
   font-size: 14px;
   color: #999999;
   line-height: 16px;
-  float: left;
+  text-align: center;
 }
 
 .location-text {
@@ -72,6 +87,8 @@ p {
   font-size: 14px;
   color: #333333;
   line-height: 21px;
+  text-align: center;
+  margin: 0;
 }
 
 a {
@@ -81,20 +98,40 @@ a {
   display: block;
 }
 
+.navbar {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav_list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.nav_item {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+  line-height: 24px;
+  padding: 24px;
+  text-transform: uppercase;
+}
+
+
 .welcome-message {
   font-style: italic;
   font-size: 18px;
   color: #F3F3F3;
   line-height: 28px;
+  text-align: center;
 }
 
 #skillsH3 {
   color: #F5AE23;
   display: none;
-}
-
-.orange {
-  background-color: #F3F3F3;
 }
 
 .orange-text {
@@ -112,14 +149,13 @@ a {
   clear:both;
 }
 
-.dark-gray {
+#lets-connect {
   background-color: #1199C3;
 }
 
 /* TODO: Replace with image later */
 #header {
-    background-image: url("http://lorempixel.com/output/abstract-q-c-640-480-3.jpg");
-    background-size: cover;
+  background-color: #1199C3;
 }
 
 .flex-box {
@@ -128,7 +164,7 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 10px;
+  padding: 5px;
 }
 
 .center-content {
@@ -140,8 +176,13 @@ a {
 
 ul {
   list-style-type: none;
+  text-decoration: none;
 }
 
+li {
+  text-align: center;
+  list-style-type: none;
+}
 .biopic {
   float: left;
   padding: 10px;
@@ -151,6 +192,7 @@ ul {
 
 img {
   padding: 10px;
+  display: flex;
 }
 
 /* Bar chart stuff */
@@ -184,6 +226,7 @@ span {
   .biopic {
     width: 175px;
   }
+
   #letsConnect {
     margin-top: 10%;
     text-align: center;
@@ -200,7 +243,7 @@ span {
 #mapDiv {
   height: 400px;
   width: 100%;
-  padding-bottom: 5%;
+  padding-bottom: 7%;
 }
 
 @media only screen and (min-width: 550px) {

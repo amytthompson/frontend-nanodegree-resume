@@ -11,7 +11,7 @@ var bio = {
     },
     'welcomeMessage': '#learningNerd',
     'bioPic': 'images/mypicture.jpg',
-    'skills': ['HTML/CSS', 'JavaScript', 'Git/Github']
+    'skills': ['HTML5', 'CSS3', 'JavaScript', 'Git/Github']
 };
 //appends contact information to resume
 bio.display = function() {
@@ -20,7 +20,7 @@ bio.display = function() {
 
     var formattedName = HTMLheaderName.replace(data, bio.name);
     var formattedRole = HTMLheaderRole.replace(data, bio.role);
-    $header.append(formattedName + formattedRole);
+    $header.prepend(formattedName + formattedRole);
 
     var formattedPic = HTMLbioPic.replace(data, bio.bioPic);
     var formattedWelcome = HTMLwelcomeMsg.replace(data, bio.welcomeMessage);
@@ -157,19 +157,19 @@ var projects = {
         'title': 'Project1',
         'dates': 'January February',
         'description': 'Project Portfolio',
-        'images': 'http://lorempixel.com/output/abstract-q-c-640-480-3.jpg'
+        'images': 'http://lorempixel.com/output/abstract-q-c-304-205-3.jpg'
     }, {
 
         'title': 'Project2',
         'dates': 'March April',
         'description': 'Online Resume',
-        'images': 'http://lorempixel.com/output/abstract-q-c-640-480-1.jpg'
+        'images': 'http://lorempixel.com/output/abstract-q-c-304-205-1.jpg'
     }, {
 
         'title': 'Project3',
         'dates': 'May June',
         'description': 'Arcade Game',
-        'images': 'http://lorempixel.com/output/abstract-q-c-640-480-9.jpg'
+        'images': 'http://lorempixel.com/output/abstract-q-c-304-205-7.jpg'
     }, ]
 };
 //appends project history to resume
