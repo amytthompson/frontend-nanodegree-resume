@@ -17,15 +17,12 @@ var bio = {
 bio.display = function() {
     var data = '%data%';
     var $header = $('#header');
-
     var formattedName = HTMLheaderName.replace(data, bio.name);
     var formattedRole = HTMLheaderRole.replace(data, bio.role);
     $header.prepend(formattedName + formattedRole);
-
     var formattedPic = HTMLbioPic.replace(data, bio.bioPic);
     var formattedWelcome = HTMLwelcomeMsg.replace(data, bio.welcomeMessage);
     $header.append(formattedPic + formattedWelcome);
-
     var formattedEmail = HTMLemail.replace(data, bio.contacts.email);
     var formattedGithub = HTMLgithub.replace(data, bio.contacts.github);
     var formattedTwitter = HTMLtwitter.replace(data, bio.contacts.twitter);
@@ -40,6 +37,16 @@ bio.display = function() {
         var formattedSkill1 = HTMLskills.replace(data, bio.skills[1]);
         var formattedSkill2 = HTMLskills.replace(data, bio.skills[2]);
         $header.append(formattedSkill0 + formattedSkill1 + formattedSkill2);
+    }
+
+//internationalizes name
+    $('#bio').append(internationalizeButton);
+    function inName(name) {
+        //var inName = name;
+        name = name.trim().split(' ');
+        name[1] = name[1].toUpperCase();
+        name[0] = name[0].slice(0, 1).toUpperCase() + name[0].slice(1).toLowerCase();
+        return name[0] + name[1];  
     }
 };
 bio.display();
@@ -157,19 +164,20 @@ var projects = {
         'title': 'Project1',
         'dates': 'January February',
         'description': 'Project Portfolio',
-        'images': 'http://lorempixel.com/output/abstract-q-c-304-205-3.jpg'
+        'images': 'http://lorempixel.com/output/abstract-q-c-250-204-3.jpg'
     }, {
 
         'title': 'Project2',
         'dates': 'March April',
         'description': 'Online Resume',
-        'images': 'http://lorempixel.com/output/abstract-q-c-304-205-1.jpg'
+        'images': 'http://lorempixel.com/output/abstract-q-c-250-204-1.jpg'
     }, {
 
         'title': 'Project3',
         'dates': 'May June',
         'description': 'Arcade Game',
-        'images': 'http://lorempixel.com/output/abstract-q-c-304-205-7.jpg'
+        'images': 'http://lorempixel.com/output/abstract-q-c-250-204-2.jpg'
+
     }, ]
 };
 //appends project history to resume
@@ -208,15 +216,5 @@ function locationizer(work_obj) {
     return locationArray;
 }
 
-//appends internationalize button to resume
-$('#main').append(internationalizeButton);
 
-//internationalizes name
-function inName(name) {
-    name = name.trim().split(' ');
-    name[1] = name[1].toUpperCase();
-    name[0] = name[0].slice(0, 1).toUpperCase() + name[0].slice(1).toLowerCase();
-
-    return name[0] + name[1];
-}
 
