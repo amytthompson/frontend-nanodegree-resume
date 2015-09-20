@@ -98,7 +98,7 @@ work.display = function() {
             var formattedLocation = HTMLworkLocation.replace(data, job.location);
             $('.work-entry:last').append(formattedDates + formattedDescription + formattedLocation);           
         });
-}
+};
 work.display();
 
 var education = {
